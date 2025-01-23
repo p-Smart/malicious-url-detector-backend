@@ -85,5 +85,5 @@ def check_url():
     response = test_url_with_saved_model(url, model_name)
     return jsonify(response)
 
-if __name__ == '__main__':
-    app.run(debug=True)
+# if __name__ == '__main__':
+#     app.run(debug=True)
