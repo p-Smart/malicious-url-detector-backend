@@ -58,6 +58,19 @@ def test_url_with_saved_model(url, model_name):
             "message": f"An error occurred: {e}"
         }
 
+@app.route('/', methods=['GET'])
+def home():
+    """
+    API endpoint to check the status of the Malicious URL Detector API.
+
+    Returns:
+        JSON response with a success message.
+    """
+    return jsonify({
+        "success": True,
+        "message": "Malicious URL Detector API"
+    })
+
 @app.route('/check-url', methods=['POST'])
 def check_url():
     """
