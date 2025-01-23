@@ -1,4 +1,5 @@
 from flask import Flask, request, jsonify
+from flask_cors import CORS
 import pickle
 import warnings
 from sklearn.exceptions import InconsistentVersionWarning
@@ -8,6 +9,8 @@ warnings.filterwarnings("ignore", category=InconsistentVersionWarning)
 
 # Initialize Flask app
 app = Flask(__name__)
+
+CORS(app)
 
 def load_file(file_name):
     """Utility function to load a pickled file."""
