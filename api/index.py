@@ -6,7 +6,7 @@ app = Flask(__name__)
 def hello_world():
     response = {
         "success": True,
-        "message": "Hello world"
+        "message": "Hello world."
     }
     return jsonify(response)
 
